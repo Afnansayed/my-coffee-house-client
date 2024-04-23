@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const Coffee = ({ newCoffee }) => {
@@ -46,7 +47,7 @@ const Coffee = ({ newCoffee }) => {
                 <div className="card-actions justify-end">
                     <div className="join join-vertical">
                         <button className="btn join-item">view</button>
-                        <button className="btn join-item">Edit</button>
+                        <Link to={`/updateCoffee/${_id}`}><button className="btn join-item">Update</button></Link>
                         <button
                             onClick={() => handleDelete(_id)}
                             className="btn join-item">X</button>
