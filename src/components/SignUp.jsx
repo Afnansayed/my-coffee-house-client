@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "./Provider/AuthProvider";
-import { data } from "autoprefixer";
+
 
 
 const signUP = () => {
