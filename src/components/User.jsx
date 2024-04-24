@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 import Swal from 'sweetalert2';
 const User = ({ user ,users,setUsers }) => {
-    console.log(users)
+   // console.log(users)
     const handleDelete = id => {
         console.log(id)
         Swal.fire({
@@ -39,6 +39,7 @@ const User = ({ user ,users,setUsers }) => {
             <th></th>
             <td>{user.email}</td>
             <td>{user?.createdAt}</td>
+            <td>{user?.lastSignIn}</td>
             <td><button onClick={() => handleDelete(user._id)} className='btn'>X</button></td>
 
         </tr>
