@@ -1,9 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 import User from "./User";
+import { useState } from "react";
 
 
 const Users = () => {
     const loadedUser = useLoaderData();
+    const [users,setUsers] = useState(loadedUser);
     return (
         <div className="overflow-x-auto">
             <table className="table">
@@ -13,14 +15,17 @@ const Users = () => {
                         <th></th>
                         <th>Email Account</th>
                         <th>Account Creating Time</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
                     {/* row  */}
                  
                  {
-                    loadedUser.map(user => <User key={user._id}
+                    users.map(user => <User key={user._id}
                      user={user}
+                     setUsers={setUsers}
+                     users={users}
                     ></User>)
                  }
                     
