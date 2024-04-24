@@ -30,6 +30,8 @@ const Coffee = ({ newCoffee }) => {
                                 text: "Your file has been deleted.",
                                 icon: "success"
                               });
+                            //   const remaining = coffee.filter(coff => coff._id !== _id);
+                            //   setCoffee(remaining)
                         }
                     })
             }
@@ -58,6 +60,7 @@ const Coffee = ({ newCoffee }) => {
     );
 };
 Coffee.propTypes = {
-    newCoffee: PropTypes.object
+    newCoffee: PropTypes.object,
+    // coffee:PropTypes.array
 }
 export default Coffee;
