@@ -19,7 +19,7 @@ const Coffee = ({ newCoffee }) => {
             if (result.isConfirmed) {
 
                 //console.log('delete successful')
-                fetch(`http://localhost:5000/coffee/${_id}`,{
+                fetch(`https://my-coffe-house-server.vercel.app/coffee/${_id}`,{
                     method: 'delete'
                 })
                     .then(res => res.json())
